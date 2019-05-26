@@ -29,7 +29,6 @@ function validateInput(value) {
 
 // promptUserPurchase will prompt the user for the item/quantity they would like to purchase
 function promptUserPurchase() {
-    // console.log('___ENTER promptUserPurchase___');
 
     // Prompt the user to select an item
     inquirer.prompt([{
@@ -42,12 +41,11 @@ function promptUserPurchase() {
         {
             type: 'input',
             name: 'quantity',
-            message: 'How many do you need?',
+            message: 'How many do you need ?',
             validate: validateInput,
             filter: Number
         }
     ]).then(function(input) {
-        // console.log('Customer has selected: \n    item_id = '  + input.item_id + '\n    quantity = ' + input.quantity);
 
         var item = input.item_id;
         var quantity = input.quantity;
@@ -114,7 +112,7 @@ function displayInventory() {
         if (err) throw err;
 
         console.log('Existing Inventory: ');
-        console.log('...................\n');
+        console.log('..........#.........\n');
 
         var strOut = '';
         for (var i = 0; i < data.length; i++) {
@@ -127,7 +125,7 @@ function displayInventory() {
             console.log(strOut);
         }
 
-        console.log("---------------------------------------------------------------------\n");
+        console.log("------------------------$%$-----------------------------\n");
 
         //Prompt the user for item/quantity they would like to purchase
         promptUserPurchase();
