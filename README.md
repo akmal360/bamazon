@@ -4,7 +4,7 @@
 
 This application implements a simple command line based storefront using the npm
 
-### MySQL Database Setup
+### MySQL DB
 
 In order to run this application, you should have the MySQL database already set up on your machine. If you don't, visit the [MySQL installation page] 
 
